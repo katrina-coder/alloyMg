@@ -1,6 +1,13 @@
 import joblib
 import pickle
+import warnings
 
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore", category=UserWarning)
+    UTS = joblib.load(f"{model_dir}/UTS"
+    YS = joblib.load(f"{model_dir}/YS"
+    duct = joblib.load(f"{model_dir}/ductility"
+        
 
 
 
@@ -9,8 +16,11 @@ if 'google.colab' in str(get_ipython()):
 else:
     model_dir = "models"
 
-models = {"elongation": joblib.load(f"{model_dir}/ductility"),
-          "tensile": joblib.load(f"{model_dir}/UTS"),
-          "yield": joblib.load(f"{model_dir}/YS")
+    
+    
+    
+models = {"elongation": duct), 
+          "tensile": UTS),
+          "yield": YS)
           }
 
