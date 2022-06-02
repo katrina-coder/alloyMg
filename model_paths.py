@@ -5,7 +5,7 @@ import pickle
 
 
 if 'google.colab' in str(get_ipython()):
-    model_dir = "alloyMg/models"
+    model_dir = "MgAlloyPublic/models"
 else:
     model_dir = "models"
 
