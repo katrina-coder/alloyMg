@@ -18,7 +18,7 @@ class MgDatapoint:
     def formatForInput(self):
         ht = [1 if [i+1] in [*self.categorical_inputs.values()] else 0 for i in range(6)]
 
-        my_input = [100 - sum([*self.range_based_inputs.values()][1:-1])] + [*self.range_based_inputs.values()][1:-1] + ht  
+        my_input = [100 - sum([*self.range_based_inputs.values()][1:])] + [*self.range_based_inputs.values()][1:] + ht  
                    # [*self.range_based_inputs.values()] 
         
         print(my_input)
