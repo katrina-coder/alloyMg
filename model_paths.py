@@ -4,9 +4,9 @@ import warnings
 
 with warnings.catch_warnings():
     warnings.simplefilter("ignore", category=UserWarning)
-    UTS = joblib.load(f"{model_dir}/UTS"
-    YS = joblib.load(f"{model_dir}/YS"
-    duct = joblib.load(f"{model_dir}/ductility"
+    UTS = joblib.load(f"{model_dir}/UTS")
+    YS = joblib.load(f"{model_dir}/YS")
+    duct = joblib.load(f"{model_dir}/ductility")
         
 
 
