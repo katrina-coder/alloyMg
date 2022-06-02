@@ -15,13 +15,13 @@ else:
     
 with warnings.catch_warnings():
     warnings.simplefilter("ignore", category=UserWarning)
-    UTS_model = joblib.load(f"{model_dir}/UTS")
-    YS_model= joblib.load(f"{model_dir}/YS")
-    duct_model = joblib.load(f"{model_dir}/ductility")   
+    UTS = joblib.load(f"{model_dir}/UTS")
+    YS= joblib.load(f"{model_dir}/YS")
+    ductility = joblib.load(f"{model_dir}/ductility")   
     
     
-models = {"elongation": duct_model, 
-          "tensile": UTS_model,
-          "yield": YS_model
+models = {"elongation": ductility, 
+          "tensile": UTS,
+          "yield": YS
           }
 
