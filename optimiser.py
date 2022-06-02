@@ -24,7 +24,7 @@ class MgDatapoint:
         my_input = [100 - sum([*self.range_based_inputs.values()][1:-1])] + [*self.range_based_inputs.values()][1:-1] + ht  
                    # [*self.range_based_inputs.values()] 
         
-        
+        print(len(my_input))
         return np.reshape(my_input, (1, -1))
 
     def print(self):
@@ -36,7 +36,7 @@ class MgDatapoint:
                 print(f"{key}: {value}")
 
     #def getMg(self):
-        return 100 - sum(list(self.range_based_inputs.values())[1:-1])
+        #return 100 - sum(list(self.range_based_inputs.values())[1:-1])
 
 
 class scanSettings:
