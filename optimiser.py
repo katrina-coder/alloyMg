@@ -126,13 +126,13 @@ class optimiser:
     def printResults(self, best_datapoint):
         if self.mode == 'DoS':
             print('data point:',best_datapoint.formatForInput()) 
-            #print('predicted %f Elongation' % (self.models['elongation'].predict(best_datapoint.formatForInput())[0]))
-            print('predicted %f Yield Strength' % (1.25*(self.models['yield'].predict(best_datapoint.formatForInput())[0])))
+            #print('predicted %f Elongation' % (1.25*self.models['elongation'].predict(best_datapoint.formatForInput())[0]))
+            print('predicted %f Yield Strength' % (1.25*self.models['yield'].predict(best_datapoint.formatForInput())[0]))
             #print('predicted %f Tensile Strength' % (1.25*self.models['tensile'].predict(best_datapoint.formatForInput())[0]))
         elif self.mode == 'Mechanical':
             print('Predicted %f Elongation' % (self.models['elongation'].predict(best_datapoint.formatForInput())[0]))
-            print('Predicted %f Yield Strength' % (1.25*(self.models['yield'].predict(best_datapoint.formatForInput())[0])))
-            print('Predicted %f Tensile Strength' % (1.25*self.models['tensile'].predict(best_datapoint.formatForInput())[0]))
+            print('Predicted %f Yield Strength' % (self.models['yield'].predict(best_datapoint.formatForInput())[0]))
+            print('Predicted %f Tensile Strength' % (self.models['tensile'].predict(best_datapoint.formatForInput())[0]))
 
     def run(self):
         best_loss = None
